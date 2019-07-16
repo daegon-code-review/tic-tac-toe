@@ -1,0 +1,11 @@
+{
+    "name": "mmg/tic-tac-toe",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Roman Slobodzian",
+            "email": "r.slobodzyanmassmedia@gmail.com"
+        }
+    ],
+    "require": {}
+}
