@@ -11,6 +11,13 @@ final class GameTest extends TestCase
     public function testCanAddExactlyTwoPlayers(Game $game)
     {
         $game->addPlayer('first');
+        $game->addPlayer('second');
+
+        $this->assertEquals(['first', 'second'], $game->getPlayers());
+
+        $this->expectException(LogicException::class);
+
+        $game->addPlayer('third');
     }
 
     public function newGameProvider()
