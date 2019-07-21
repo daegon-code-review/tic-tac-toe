@@ -1,6 +1,6 @@
 <?php
 
-namespace TicTacToe;
+namespace TicTacToe\Model;
 
 class GameField
 {

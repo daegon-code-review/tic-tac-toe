@@ -1,8 +1,10 @@
 <?php
 
+namespace Model;
+
 use PHPUnit\Framework\TestCase;
-use TicTacToe\Game;
-use TicTacToe\Point;
+use TicTacToe\Model\Game;
+use TicTacToe\Model\Point;
 
 final class GameTest extends TestCase
 {
