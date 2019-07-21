@@ -5,6 +5,11 @@ namespace TicTacToe\Model;
 class Game
 {
     /**
+     * @var string
+     */
+    protected $id;
+
+    /**
      * @var array
      */
     protected $players = [];
@@ -19,9 +24,15 @@ class Game
      */
     protected $lastMarkPlayer;
 
-    public function __construct()
+    public function __construct(Uuid $uuid)
     {
+        $this->id = uniqid();
         $this->field = new GameField();
+    }
+
+    public function getId(): string
+    {
+        return $this->id;
     }
 
     public function addPlayer(string $name): void
@@ -35,22 +46,12 @@ class Game
         return $this->players;
     }
 
-    public function getField(): GameField
-    {
-        return $this->field;
-    }
-
     public function putMark($player, Point $coordinate): void
     {
         $this->assertCanPutMark($player, $coordinate);
         $this->lastMarkPlayer = $player;
 
         $this->field->putMark($coordinate, $this->getPlayerMark($player));
-    }
-
-    public function getPlayerMark($player)
-    {
-        return array_search($player, $this->players);
     }
 
     public function getWinner()
@@ -62,6 +63,11 @@ class Game
         }
 
         return $this->players[$mark];
+    }
+
+    protected function getPlayerMark($player)
+    {
+        return array_search($player, $this->players);
     }
 
     protected function assertCanAddPlayer($playerName): void
