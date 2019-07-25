@@ -12,5 +12,7 @@ class StartGame extends Action
         $game = new Game(new Uuid());
 
         $this->storeGame($game);
+
+        return $game->getId();
     }
 }

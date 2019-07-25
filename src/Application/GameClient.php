@@ -9,9 +9,9 @@ namespace TicTacToe\Application;
 // todo а реальні проекти можна робити з зв'язком до фреймворку, але тільки на рівні спільних компонентів
 // todo а іноді забити хер і робити тісний зв'язок, бо для цього є повно пакетів композера і це швидше і дешевше
 
-// todo Action should take scalars or DTO and return scalars or DTO
-// todo Action should take scalars or DTO and return scalars or DTO
-// todo Action should take scalars or DTO and return scalars or DTO
+// todo Action should take scalars or Representation and return scalars or Representation
+// todo Action should take scalars or Representation and return scalars or Representation
+// todo Action should take scalars or Representation and return scalars or Representation
 
 // todo розробка гри не як бібліотеки, а як окремо існуючого додатку. Конфігурація деталей не передається всередину.
 // todo Конфішурується саме гра і все, що їй необхідно, а не тип бази і т. д. Тип бази вже заданий грою.
