@@ -1,0 +1,13 @@
+App\TicTacToe\Model\Game:
+  type: entity
+  table: game
+  id:
+    id:
+      type: string
+      generator:
+        strategy: NONE
+  fields:
+    players:
+      type: array
+    field:
+      type: object
